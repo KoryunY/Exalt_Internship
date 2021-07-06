@@ -14,9 +14,10 @@ public class Game {
         while (timer.isAlive()){
             currentWord=FastTyper.words.get(random.nextInt(FastTyper.words.size()));
             System.out.println(currentWord);
-            if(scanner.next().equals(currentWord)){
+            if(scanner.next().equals(currentWord) && timer.isAlive()){
                 score++;
             }
+            System.out.println(timer.getTime()/1000+"seconds Left");
         }
         System.out.println("Game Over");
         System.out.println("Your Score is "+score);

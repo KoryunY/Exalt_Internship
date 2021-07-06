@@ -3,6 +3,10 @@ package com.gmail.koryun.yeritsyan.typer;
 public class Timer extends Thread{
     private int time=10000;
 
+    public int getTime() {
+        return time;
+    }
+
     @Override
     public void run() {
         while (this.time>=0){
